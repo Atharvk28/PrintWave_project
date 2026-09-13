@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | PrintWave</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/checkout.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top printwave-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <img
+                src="assets/images/printwave-logo.png"
+                alt="PrintWave"
+                class="printwave-logo"
+            >
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                    >
+                        Shop
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="shop.html">
+                                All Products
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <h6 class="dropdown-header">
+                                T-Shirts
+                            </h6>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?type=tshirt&method=printed"
+                            >
+                                Printed T-Shirts
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?type=tshirt&method=embroidered"
+                            >
+                                Embroidered T-Shirts
+                            </a>
+                        </li>
+
+                        <li>
+                            <h6 class="dropdown-header">
+                                Scarves
+                            </h6>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?type=scarf&method=printed"
+                            >
+                                Printed Scarves
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?type=scarf&method=embroidered"
+                            >
+                                Embroidered Scarves
+                            </a>
+                        </li>
+
+                        <li>
+                            <h6 class="dropdown-header">
+                                Mugs
+                            </h6>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?type=mug"
+                            >
+                                Custom Mugs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link custom-design-link"
+                        href="custom-design.html"
+                    >
+                        <i class="bi bi-magic"></i>
+                        Custom Design
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                    >
+                        Collections
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <h6 class="dropdown-header">
+                                Festival Collection
+                            </h6>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?collection=ganesh-chaturthi"
+                            >
+                                Ganesh Chaturthi
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?collection=diwali"
+                            >
+                                Diwali
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?collection=holi"
+                            >
+                                Holi
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <h6 class="dropdown-header">
+                                Team Collection
+                            </h6>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?collection=kabaddi"
+                            >
+                                Kabaddi
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?collection=cricket"
+                            >
+                                Cricket
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?collection=football"
+                            >
+                                Football
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                class="dropdown-item"
+                                href="shop.html?collection=college"
+                            >
+                                College Teams
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="navbar-actions">
+
+                <button
+                    class="nav-icon-btn"
+                    id="searchButton"
+                    title="Search"
+                >
+                    <i class="bi bi-search"></i>
+                </button>
+
+                <a
+                    href="cart.html"
+                    class="nav-icon-btn cart-icon-wrapper"
+                    title="Cart"
+                >
+                    <i class="bi bi-bag"></i>
+
+                    <span
+                        id="cartCount"
+                        class="cart-count"
+                    >
+                        0
+                    </span>
+                </a>
+
+                <a
+                    href="account.html"
+                    class="nav-icon-btn"
+                    title="Account"
+                >
+                    <i class="bi bi-person"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<div id="searchOverlay" class="search-overlay">
+
+    <div class="search-box">
+
+        <button
+            id="closeSearch"
+            class="close-search"
+        >
+            <i class="bi bi-x-lg"></i>
+        </button>
+
+        <h3>What are you looking for?</h3>
+
+        <div class="search-input-wrapper">
+
+            <i class="bi bi-search"></i>
+
+            <input
+                type="text"
+                id="globalSearch"
+                placeholder="Search T-shirts, scarves, mugs..."
+            >
+
+        </div>
+
+        <button
+            id="performSearch"
+            class="btn btn-dark search-submit"
+        >
+            Search
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CHECKOUT HEADER
+===================================================== -->
+
+<section class="checkout-header">
+
+    <div class="container">
+
+        <span class="checkout-eyebrow">
+            PRINTWAVE CHECKOUT
+        </span>
+
+        <h1>Complete Your Order</h1>
+
+        <p>
+            Enter your delivery details and review your order.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CHECKOUT
+===================================================== -->
+
+<main class="checkout-section">
+
+    <div class="container">
+
+        <form id="checkoutForm">
+
+            <div class="row g-4">
+
+                <!-- ========================================
+                     CUSTOMER DETAILS
+                ========================================= -->
+
+                <div class="col-lg-7">
+
+                    <!-- CONTACT -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <span class="step-number">
+                                01
+                            </span>
+
+                            <div>
+                                <h3>Contact Information</h3>
+
+                                <p>
+                                    We'll use this information
+                                    for your order updates.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label for="firstName">
+                                    First Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    class="form-control"
+                                    placeholder="Enter first name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="lastName">
+                                    Last Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    class="form-control"
+                                    placeholder="Enter last name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="email">
+                                    Email Address *
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="phone">
+                                    Mobile Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    class="form-control"
+                                    placeholder="10 digit mobile number"
+                                    maxlength="10"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ====================================
+                         DELIVERY ADDRESS
+                    ===================================== -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <span class="step-number">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>Delivery Address</h3>
+
+                                <p>
+                                    Where should we deliver your order?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-12">
+
+                                <label for="address">
+                                    House / Flat / Building *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="address"
+                                    name="address"
+                                    class="form-control"
+                                    placeholder="Flat no., building, street"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="landmark">
+                                    Landmark
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="landmark"
+                                    name="landmark"
+                                    class="form-control"
+                                    placeholder="Nearby landmark"
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="pincode">
+                                    Pincode *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="pincode"
+                                    name="pincode"
+                                    class="form-control"
+                                    placeholder="6 digit pincode"
+                                    maxlength="6"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="city">
+                                    City *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    class="form-control"
+                                    placeholder="City"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="state">
+                                    State *
+                                </label>
+
+                                <select
+                                    id="state"
+                                    name="state"
+                                    class="form-select"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select State
+                                    </option>
+
+                                    <option>Maharashtra</option>
+                                    <option>Gujarat</option>
+                                    <option>Goa</option>
+                                    <option>Madhya Pradesh</option>
+                                    <option>Rajasthan</option>
+                                    <option>Delhi</option>
+                                    <option>Karnataka</option>
+                                    <option>Tamil Nadu</option>
+                                    <option>Telangana</option>
+                                    <option>Andhra Pradesh</option>
+                                    <option>Kerala</option>
+                                    <option>Uttar Pradesh</option>
+                                    <option>West Bengal</option>
+                                    <option>Punjab</option>
+                                    <option>Haryana</option>
+                                    <option>Bihar</option>
+                                    <option>Odisha</option>
+                                    <option>Jharkhand</option>
+                                    <option>Chhattisgarh</option>
+                                    <option>Assam</option>
+                                    <option>Uttarakhand</option>
+                                    <option>Himachal Pradesh</option>
+                                    <option>Jammu and Kashmir</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <label for="instructions">
+                                    Delivery Instructions
+                                </label>
+
+                                <textarea
+                                    id="instructions"
+                                    name="instructions"
+                                    class="form-control"
+                                    rows="3"
+                                    placeholder="Any special delivery instructions?"
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ====================================
+                         PAYMENT
+                    ===================================== -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <span class="step-number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>Payment Method</h3>
+
+                                <p>
+                                    Choose how you want to pay.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-options">
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="cod"
+                                    checked
+                                >
+
+                                <span class="payment-icon">
+                                    <i class="bi bi-cash-stack"></i>
+                                </span>
+
+                                <span class="payment-info">
+
+                                    <strong>
+                                        Cash on Delivery
+                                    </strong>
+
+                                    <small>
+                                        Pay when your order arrives
+                                    </small>
+
+                                </span>
+
+                                <i class="bi bi-check-circle-fill payment-check"></i>
+
+                            </label>
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="online"
+                                >
+
+                                <span class="payment-icon">
+                                    <i class="bi bi-credit-card"></i>
+                                </span>
+
+                                <span class="payment-info">
+
+                                    <strong>
+                                        Online Payment
+                                    </strong>
+
+                                    <small>
+                                        Card, UPI or Net Banking
+                                    </small>
+
+                                </span>
+
+                                <i class="bi bi-check-circle-fill payment-check"></i>
+
+                            </label>
+
+                        </div>
+
+                        <div
+                            id="onlinePaymentNotice"
+                            class="payment-notice"
+                            style="display:none;"
+                        >
+                            <i class="bi bi-info-circle"></i>
+
+                            Online payment integration will be
+                            connected when we add the payment gateway.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ========================================
+                     ORDER SUMMARY
+                ========================================= -->
+
+                <div class="col-lg-5">
+
+                    <div class="checkout-summary">
+
+                        <h3>Order Summary</h3>
+
+
+                        <!-- PRODUCTS -->
+
+                        <div id="checkoutItems">
+                            <!-- JS -->
+                        </div>
+
+
+                        <hr>
+
+
+                        <div class="checkout-summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="checkoutSubtotal">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="checkout-summary-row">
+
+                            <span>
+                                Shipping
+                            </span>
+
+                            <strong class="free">
+                                FREE
+                            </strong>
+
+                        </div>
+
+
+                        <div class="checkout-summary-row">
+
+                            <span>
+                                Discount
+                            </span>
+
+                            <strong id="checkoutDiscount">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <hr>
+
+
+                        <div class="checkout-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="checkoutTotal">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <!-- TERMS -->
+
+                        <label class="terms-check">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            <span>
+                                I agree to the
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                                and
+                                <a href="#">
+                                    Privacy Policy
+                                </a>.
+                            </span>
+
+                        </label>
+
+
+                        <!-- PLACE ORDER -->
+
+                        <button
+                            type="submit"
+                            id="placeOrderButton"
+                            class="place-order-btn"
+                        >
+
+                            <span>
+                                Place Order
+                            </span>
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+
+                        <a
+                            href="cart.html"
+                            class="back-to-cart"
+                        >
+                            <i class="bi bi-arrow-left"></i>
+                            Back to Cart
+                        </a>
+
+
+                        <!-- TRUST -->
+
+                        <div class="checkout-trust">
+
+                            <div>
+                                <i class="bi bi-shield-check"></i>
+                                Secure Checkout
+                            </div>
+
+                            <div>
+                                <i class="bi bi-truck"></i>
+                                Reliable Delivery
+                            </div>
+
+                            <div>
+                                <i class="bi bi-headset"></i>
+                                Customer Support
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-4 mb-4">
+
+                <img
+                    src="assets/images/printwave-logo.png"
+                    alt="PrintWave"
+                    class="footer-logo"
+                >
+
+                <p>
+                    Your ideas. Your style.
+                    Your PrintWave.
+                </p>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>Shop</h6>
+
+                <a href="shop.html">All Products</a>
+                <a href="shop.html?type=tshirt">T-Shirts</a>
+                <a href="shop.html?type=scarf">Scarves</a>
+                <a href="shop.html?type=mug">Mugs</a>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>Collections</h6>
+
+                <a href="shop.html?collection=diwali">Diwali</a>
+                <a href="shop.html?collection=holi">Holi</a>
+                <a href="shop.html?collection=cricket">Cricket</a>
+                <a href="shop.html?collection=college">College</a>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>Help</h6>
+
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQ</a>
+                <a href="index.html#contact">Contact</a>
+
+            </div>
+
+
+            <div class="col-6 col-lg-2">
+
+                <h6>Follow</h6>
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 PrintWave. All rights reserved.
+            </span>
+
+            <span>
+                Made for creators.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/checkout.js"></script>
+
+</body>
+</html>

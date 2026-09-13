@@ -1,0 +1,1801 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shop | PrintWave</title>
+
+    <meta
+      name="description"
+      content="Shop custom printed and embroidered T-shirts, scarves and mugs at PrintWave."
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =====================================================
+           ROOT
+        ===================================================== */
+
+      :root {
+        --pw-black: #151515;
+        --pw-dark: #1d1d1d;
+
+        --pw-yellow: #ffb914;
+        --pw-yellow-dark: #e7a400;
+
+        --pw-white: #ffffff;
+        --pw-light: #f7f7f5;
+
+        --pw-gray: #777777;
+        --pw-border: #e5e5e5;
+      }
+
+      /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+
+        color: var(--pw-black);
+
+        background: #ffffff;
+
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+      .main-navbar {
+        background: var(--pw-black);
+
+        min-height: 88px;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .navbar-brand {
+        margin-right: 45px;
+      }
+
+      .navbar-brand img {
+        height: 62px;
+
+        width: auto;
+      }
+
+      .navbar-nav {
+        gap: 5px;
+      }
+
+      .navbar-nav .nav-link {
+        color: #f4f4f4;
+
+        font-size: 15px;
+
+        font-weight: 500;
+
+        padding: 32px 15px !important;
+
+        position: relative;
+
+        transition: 0.25s ease;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: var(--pw-yellow);
+      }
+
+      .navbar-nav .nav-link.active {
+        color: var(--pw-yellow);
+      }
+
+      .navbar-nav .nav-link.active::after {
+        content: "";
+
+        position: absolute;
+
+        left: 15px;
+
+        right: 15px;
+
+        bottom: 17px;
+
+        height: 3px;
+
+        background: var(--pw-yellow);
+
+        border-radius: 5px;
+      }
+
+      /* DROPDOWN */
+
+      .dropdown-menu {
+        border: none;
+
+        border-radius: 12px;
+
+        padding: 10px;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .dropdown-item {
+        font-size: 14px;
+
+        font-weight: 500;
+
+        padding: 10px 14px;
+
+        border-radius: 7px;
+      }
+
+      .dropdown-item:hover {
+        background: #fff5d8;
+
+        color: var(--pw-black);
+      }
+
+      .dropdown-header {
+        color: var(--pw-yellow-dark);
+
+        font-weight: 700;
+
+        font-size: 12px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1px;
+      }
+
+      /* NAV ACTIONS */
+
+      .nav-actions {
+        display: flex;
+
+        align-items: center;
+
+        gap: 24px;
+
+        margin-left: auto;
+      }
+
+      .nav-action {
+        color: white;
+
+        font-size: 22px;
+
+        position: relative;
+
+        transition: 0.25s ease;
+      }
+
+      .nav-action:hover {
+        color: var(--pw-yellow);
+      }
+
+      .cart-count {
+        position: absolute;
+
+        top: -10px;
+
+        right: -12px;
+
+        width: 19px;
+
+        height: 19px;
+
+        border-radius: 50%;
+
+        background: var(--pw-yellow);
+
+        color: var(--pw-black);
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 10px;
+
+        font-weight: 800;
+      }
+
+      /* =====================================================
+           PAGE HEADER
+        ===================================================== */
+
+      .shop-header {
+        background: var(--pw-light);
+
+        padding: 55px 0;
+
+        border-bottom: 1px solid var(--pw-border);
+      }
+
+      .breadcrumb {
+        margin-bottom: 20px;
+      }
+
+      .breadcrumb-item {
+        font-size: 13px;
+      }
+
+      .breadcrumb-item a {
+        color: #777;
+      }
+
+      .breadcrumb-item.active {
+        color: var(--pw-black);
+
+        font-weight: 600;
+      }
+
+      .shop-header h1 {
+        font-size: 42px;
+
+        font-weight: 800;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 10px;
+      }
+
+      .shop-header p {
+        color: var(--pw-gray);
+
+        max-width: 600px;
+
+        margin: 0;
+
+        line-height: 1.7;
+      }
+
+      /* =====================================================
+           SHOP CATEGORY NAVIGATION
+        ===================================================== */
+
+      .category-navigation {
+        border-bottom: 1px solid var(--pw-border);
+
+        background: #ffffff;
+
+        position: sticky;
+
+        top: 88px;
+
+        z-index: 900;
+      }
+
+      .category-nav-inner {
+        display: flex;
+
+        gap: 8px;
+
+        overflow-x: auto;
+
+        padding: 15px 0;
+      }
+
+      .category-nav-inner::-webkit-scrollbar {
+        display: none;
+      }
+
+      .category-link {
+        white-space: nowrap;
+
+        border: 1px solid var(--pw-border);
+
+        color: #444;
+
+        padding: 9px 18px;
+
+        border-radius: 50px;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        transition: 0.2s ease;
+      }
+
+      .category-link:hover {
+        border-color: var(--pw-yellow);
+
+        color: var(--pw-black);
+      }
+
+      .category-link.active {
+        background: var(--pw-yellow);
+
+        border-color: var(--pw-yellow);
+
+        color: var(--pw-black);
+      }
+
+      /* =====================================================
+           SHOP AREA
+        ===================================================== */
+
+      .shop-section {
+        padding: 55px 0 80px;
+      }
+
+      /* =====================================================
+           FILTER SIDEBAR
+        ===================================================== */
+
+      .filter-sidebar {
+        border: 1px solid var(--pw-border);
+
+        border-radius: 12px;
+
+        padding: 22px;
+
+        position: sticky;
+
+        top: 155px;
+      }
+
+      .filter-title {
+        font-size: 17px;
+
+        font-weight: 800;
+
+        padding-bottom: 18px;
+
+        border-bottom: 1px solid var(--pw-border);
+
+        margin-bottom: 20px;
+      }
+
+      .filter-group {
+        padding-bottom: 22px;
+
+        margin-bottom: 22px;
+
+        border-bottom: 1px solid var(--pw-border);
+      }
+
+      .filter-group:last-child {
+        border-bottom: none;
+
+        margin-bottom: 0;
+      }
+
+      .filter-group h6 {
+        font-size: 13px;
+
+        font-weight: 800;
+
+        margin-bottom: 15px;
+      }
+
+      .form-check {
+        margin-bottom: 10px;
+      }
+
+      .form-check-label {
+        font-size: 13px;
+
+        color: #555;
+      }
+
+      .form-check-input:checked {
+        background-color: var(--pw-yellow);
+
+        border-color: var(--pw-yellow);
+      }
+
+      .price-inputs {
+        display: flex;
+
+        gap: 8px;
+      }
+
+      .price-inputs input {
+        width: 100%;
+
+        border: 1px solid var(--pw-border);
+
+        border-radius: 7px;
+
+        padding: 8px;
+
+        font-size: 12px;
+      }
+
+      .clear-filter {
+        color: #777;
+
+        font-size: 12px;
+
+        font-weight: 600;
+      }
+
+      .clear-filter:hover {
+        color: var(--pw-black);
+      }
+
+      /* =====================================================
+           TOOLBAR
+        ===================================================== */
+
+      .shop-toolbar {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 15px;
+
+        margin-bottom: 25px;
+      }
+
+      .product-count {
+        color: #777;
+
+        font-size: 13px;
+      }
+
+      .product-count strong {
+        color: var(--pw-black);
+      }
+
+      .toolbar-right {
+        display: flex;
+
+        gap: 10px;
+
+        align-items: center;
+      }
+
+      .sort-select {
+        border: 1px solid var(--pw-border);
+
+        border-radius: 8px;
+
+        padding: 9px 35px 9px 12px;
+
+        font-size: 13px;
+
+        font-weight: 500;
+
+        background-color: white;
+      }
+
+      .filter-mobile {
+        display: none;
+      }
+
+      /* =====================================================
+           PRODUCT CARD
+        ===================================================== */
+
+      .product-card {
+        background: white;
+
+        border: 1px solid var(--pw-border);
+
+        border-radius: 12px;
+
+        overflow: hidden;
+
+        height: 100%;
+
+        transition: 0.3s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+      }
+
+      .product-image {
+        height: 280px;
+
+        background: #f4f4f4;
+
+        position: relative;
+
+        overflow: hidden;
+      }
+
+      .product-image img {
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+
+        transition: 0.4s ease;
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-badge {
+        position: absolute;
+
+        left: 13px;
+
+        top: 13px;
+
+        padding: 6px 10px;
+
+        border-radius: 30px;
+
+        background: var(--pw-yellow);
+
+        color: var(--pw-black);
+
+        font-size: 10px;
+
+        font-weight: 800;
+
+        z-index: 2;
+      }
+
+      .product-badge.sale {
+        background: #151515;
+
+        color: white;
+      }
+
+      .wishlist {
+        position: absolute;
+
+        right: 13px;
+
+        top: 13px;
+
+        width: 35px;
+
+        height: 35px;
+
+        border-radius: 50%;
+
+        border: none;
+
+        background: white;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 17px;
+
+        z-index: 2;
+
+        transition: 0.2s ease;
+      }
+
+      .wishlist:hover {
+        background: var(--pw-yellow);
+      }
+
+      .quick-view {
+        position: absolute;
+
+        bottom: 12px;
+
+        left: 12px;
+
+        right: 12px;
+
+        padding: 10px;
+
+        border: none;
+
+        background: rgba(21, 21, 21, 0.92);
+
+        color: white;
+
+        border-radius: 7px;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        opacity: 0;
+
+        transform: translateY(10px);
+
+        transition: 0.25s ease;
+      }
+
+      .product-card:hover .quick-view {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      /* =====================================================
+           PRODUCT DETAILS
+        ===================================================== */
+
+      .product-details {
+        padding: 17px;
+      }
+
+      .product-category {
+        color: #999;
+
+        font-size: 11px;
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.8px;
+
+        margin-bottom: 6px;
+      }
+
+      .product-name {
+        color: var(--pw-black);
+
+        font-size: 15px;
+
+        font-weight: 700;
+
+        margin-bottom: 8px;
+      }
+
+      .rating {
+        font-size: 12px;
+
+        margin-bottom: 9px;
+      }
+
+      .rating i {
+        color: var(--pw-yellow-dark);
+      }
+
+      .rating span {
+        color: #888;
+
+        margin-left: 4px;
+      }
+
+      .price-row {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 8px;
+      }
+
+      .product-price {
+        font-size: 17px;
+
+        font-weight: 800;
+      }
+
+      .old-price {
+        color: #aaa;
+
+        font-size: 12px;
+
+        font-weight: 400;
+
+        text-decoration: line-through;
+
+        margin-left: 5px;
+      }
+
+      .add-cart {
+        width: 38px;
+
+        height: 38px;
+
+        border: none;
+
+        border-radius: 50%;
+
+        background: var(--pw-black);
+
+        color: white;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        transition: 0.2s ease;
+      }
+
+      .add-cart:hover {
+        background: var(--pw-yellow);
+
+        color: var(--pw-black);
+      }
+
+      /* =====================================================
+           PAGINATION
+        ===================================================== */
+
+      .pagination {
+        margin-top: 50px;
+      }
+
+      .page-link {
+        border: 1px solid var(--pw-border);
+
+        color: var(--pw-black);
+
+        margin: 0 3px;
+
+        border-radius: 7px !important;
+
+        font-size: 13px;
+      }
+
+      .page-link:hover {
+        background: #fff5d8;
+
+        color: var(--pw-black);
+      }
+
+      .page-item.active .page-link {
+        background: var(--pw-yellow);
+
+        border-color: var(--pw-yellow);
+
+        color: var(--pw-black);
+      }
+
+      /* =====================================================
+           FOOTER
+        ===================================================== */
+
+      footer {
+        background: #111;
+
+        color: white;
+      }
+
+      .footer-main {
+        padding: 65px 0 40px;
+      }
+
+      .footer-logo img {
+        height: 55px;
+
+        margin-bottom: 18px;
+      }
+
+      .footer-description {
+        color: #aaa;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+        max-width: 320px;
+      }
+
+      .footer-title {
+        font-size: 15px;
+
+        font-weight: 700;
+
+        margin-bottom: 20px;
+      }
+
+      .footer-links {
+        list-style: none;
+
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 11px;
+      }
+
+      .footer-links a {
+        color: #aaa;
+
+        font-size: 14px;
+
+        transition: 0.2s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--pw-yellow);
+      }
+
+      .social-links {
+        display: flex;
+
+        gap: 10px;
+      }
+
+      .social-links a {
+        width: 38px;
+
+        height: 38px;
+
+        border: 1px solid #444;
+
+        border-radius: 50%;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        color: white;
+
+        transition: 0.2s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--pw-yellow);
+
+        border-color: var(--pw-yellow);
+
+        color: var(--pw-black);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #292929;
+
+        padding: 20px 0;
+
+        color: #777;
+
+        font-size: 13px;
+      }
+
+      /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+      @media (max-width: 991px) {
+        .navbar-brand {
+          margin-right: 0;
+        }
+
+        .navbar-brand img {
+          height: 50px;
+        }
+
+        .navbar-nav {
+          padding: 15px 0;
+        }
+
+        .navbar-nav .nav-link {
+          padding: 12px 0 !important;
+        }
+
+        .navbar-nav .nav-link.active::after {
+          display: none;
+        }
+
+        .nav-actions {
+          padding-bottom: 15px;
+
+          margin-left: 0;
+        }
+
+        .category-navigation {
+          top: 75px;
+        }
+
+        .filter-sidebar {
+          position: static;
+        }
+
+        .filter-mobile {
+          display: block;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .shop-header {
+          padding: 40px 0;
+        }
+
+        .shop-header h1 {
+          font-size: 34px;
+        }
+
+        .shop-section {
+          padding: 40px 0 60px;
+        }
+
+        .shop-toolbar {
+          align-items: flex-start;
+
+          flex-direction: column;
+        }
+
+        .toolbar-right {
+          width: 100%;
+        }
+
+        .sort-select {
+          width: 100%;
+        }
+
+        .product-image {
+          height: 240px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+    <nav class="navbar navbar-expand-lg main-navbar sticky-top">
+      <div class="container">
+        <!-- LOGO -->
+
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/images/logo.png" alt="PrintWave" />
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+        >
+          <i class="bi bi-list text-white fs-2"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <!-- MAIN NAV -->
+
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- HOME -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"> Home </a>
+            </li>
+
+            <!-- SHOP -->
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Shop
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="shop.html"> All Products </a>
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <h6 class="dropdown-header">T-Shirts</h6>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="printed-tshirts.html">
+                    Printed T-Shirts
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="embroidered-tshirts.html">
+                    Embroidered T-Shirts
+                  </a>
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <h6 class="dropdown-header">Scarves</h6>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="printed-scarves.html">
+                    Printed Scarves
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="embroidered-scarves.html">
+                    Embroidered Scarves
+                  </a>
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="mugs.html"> Custom Mugs </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- CUSTOM DESIGN -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="custom-design.html"> Custom Design </a>
+            </li>
+
+            <!-- COLLECTIONS -->
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                data-bs-toggle="dropdown"
+              >
+                Collections
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <h6 class="dropdown-header">Festival Collection</h6>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="ganesh-chaturthi.html">
+                    Ganesh Chaturthi
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="diwali.html"> Diwali </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="holi.html"> Holi </a>
+                </li>
+
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+
+                <li>
+                  <h6 class="dropdown-header">Team Collection</h6>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="kabaddi.html"> Kabaddi </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="cricket.html"> Cricket </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="football.html"> Football </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="college-teams.html">
+                    College Teams
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- ABOUT -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+
+            <!-- CONTACT -->
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- RIGHT ACTIONS -->
+
+          <div class="nav-actions">
+            <a href="search.html" class="nav-action">
+              <i class="bi bi-search"></i>
+            </a>
+
+            <a href="cart.html" class="nav-action">
+              <i class="bi bi-cart3"></i>
+
+              <span class="cart-count"> 0 </span>
+            </a>
+
+            <a href="account.html" class="nav-action">
+              <i class="bi bi-person"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =========================================================
+     SHOP HEADER
+========================================================= -->
+
+    <section class="shop-header">
+      <div class="container">
+        <!-- BREADCRUMB -->
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="../index.html"> Home </a>
+            </li>
+
+            <li class="breadcrumb-item active">Shop</li>
+          </ol>
+        </nav>
+
+        <h1>Shop PrintWave</h1>
+
+        <p>
+          Explore our collection of custom printed and embroidered T-shirts,
+          scarves and mugs. Find something you love or create something
+          completely your own.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     CATEGORY NAVIGATION
+========================================================= -->
+
+    <section class="category-navigation">
+      <div class="container">
+        <div class="category-nav-inner">
+          <a href="shop.html" class="category-link active"> All Products </a>
+
+          <a href="printed-tshirts.html" class="category-link">
+            Printed T-Shirts
+          </a>
+
+          <a href="embroidered-tshirts.html" class="category-link">
+            Embroidered T-Shirts
+          </a>
+
+          <a href="printed-scarves.html" class="category-link">
+            Printed Scarves
+          </a>
+
+          <a href="embroidered-scarves.html" class="category-link">
+            Embroidered Scarves
+          </a>
+
+          <a href="mugs.html" class="category-link"> Custom Mugs </a>
+
+          <a href="custom-design.html" class="category-link">
+            Create Your Own
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     SHOP CONTENT
+========================================================= -->
+
+    <section class="shop-section">
+      <div class="container">
+        <div class="row g-4">
+          <!-- =================================================
+                 FILTER SIDEBAR
+            ================================================= -->
+
+          <div class="col-lg-3">
+            <!-- MOBILE FILTER BUTTON -->
+
+            <button
+              class="btn btn-dark w-100 mb-3 filter-mobile"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileFilters"
+            >
+              <i class="bi bi-sliders me-2"></i>
+
+              Filters
+            </button>
+
+            <!-- DESKTOP FILTER -->
+
+            <div class="filter-sidebar d-none d-lg-block">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="filter-title mb-0 border-0 pb-0">Filters</h5>
+
+                <a href="#" class="clear-filter"> Clear All </a>
+              </div>
+
+              <hr />
+
+              <!-- CATEGORY -->
+
+              <div class="filter-group">
+                <h6>Category</h6>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="filterTshirts"
+                  />
+
+                  <label class="form-check-label" for="filterTshirts">
+                    T-Shirts
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="filterScarves"
+                  />
+
+                  <label class="form-check-label" for="filterScarves">
+                    Scarves
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="filterMugs"
+                  />
+
+                  <label class="form-check-label" for="filterMugs">
+                    Mugs
+                  </label>
+                </div>
+              </div>
+
+              <!-- PRINT TYPE -->
+
+              <div class="filter-group">
+                <h6>Print Type</h6>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input type-filter"
+                    type="checkbox"
+                    value="printed"
+                    id="filterPrinted"
+                  />
+
+                  <label class="form-check-label" for="filterPrinted">
+                    Printed
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input type-filter"
+                    type="checkbox"
+                    value="embroidered"
+                    id="filterEmbroidered"
+                  />
+
+                  <label class="form-check-label" for="filterEmbroidered">
+                    Embroidered
+                  </label>
+                </div>
+              </div>
+
+              <!-- PRICE -->
+
+              <div class="filter-group">
+                <h6>Price Range</h6>
+
+                <div class="price-inputs">
+                  <input type="number" id="minPrice" placeholder="Min ₹" />
+
+                  <input type="number" id="maxPrice" placeholder="Max ₹" />
+                </div>
+              </div>
+
+              <!-- SIZE -->
+
+              <div class="filter-group">
+                <h6>Size</h6>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input size-filter"
+                    type="checkbox"
+                    value="S"
+                    id="sizeS"
+                  />
+
+                  <label class="form-check-label" for="sizeS"> S </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input size-filter"
+                    type="checkbox"
+                    value="M"
+                    id="sizeM"
+                  />
+
+                  <label class="form-check-label" for="sizeM"> M </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input size-filter"
+                    type="checkbox"
+                    value="L"
+                    id="sizeL"
+                  />
+
+                  <label class="form-check-label" for="sizeL"> L </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input size-filter"
+                    type="checkbox"
+                    value="XL"
+                    id="sizeXL"
+                  />
+
+                  <label class="form-check-label" for="sizeXL"> XL </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input size-filter"
+                    type="checkbox"
+                    value="XXL"
+                    id="sizeXXL"
+                  />
+
+                  <label class="form-check-label" for="sizeXXL"> XXL </label>
+                </div>
+              </div>
+
+              <!-- COLLECTION -->
+
+              <div class="filter-group">
+                <h6>Collection</h6>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input collection-filter"
+                    type="checkbox"
+                    value="festival"
+                    id="filterFestival"
+                  />
+
+                  <label class="form-check-label" for="filterFestival">
+                    Festival
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input collection-filter"
+                    type="checkbox"
+                    value="team"
+                    id="filterTeam"
+                  />
+
+                  <label class="form-check-label" for="filterTeam">
+                    Team & Sports
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input
+                    class="form-check-input collection-filter"
+                    type="checkbox"
+                    value="personalized"
+                    id="filterPersonalized"
+                  />
+
+                  <label class="form-check-label" for="filterPersonalized">
+                    Personalized
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =================================================
+                 PRODUCT AREA
+            ================================================= -->
+
+          <div class="col-lg-9">
+            <!-- TOOLBAR -->
+
+            <div class="shop-toolbar">
+              <div class="product-count">
+                Showing
+                <strong id="productCount">0</strong>
+                products
+              </div>
+
+              <div class="toolbar-right">
+                <div class="position-relative">
+                  <i
+                    class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"
+                  >
+                  </i>
+
+                  <input
+                    type="search"
+                    id="shopSearch"
+                    class="form-control ps-5"
+                    placeholder="Search products..."
+                    style="width: 230px"
+                  />
+                </div>
+
+                <select id="sortProducts" class="sort-select">
+                  <option value="featured">Sort: Featured</option>
+
+                  <option value="newest">Newest</option>
+
+                  <option value="price-low">Price: Low to High</option>
+
+                  <option value="price-high">Price: High to Low</option>
+
+                  <option value="rating">Best Rated</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     PRODUCTS
+                ================================================= -->
+
+            <div class="row g-4" id="productGrid">
+              <!-- Products generated automatically by shop.js -->
+            </div>
+
+            <!-- =================================================
+                     PAGINATION
+                ================================================= -->
+
+            <nav aria-label="Product pagination">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link">
+                    <i class="bi bi-chevron-left"></i>
+                  </a>
+                </li>
+
+                <li class="page-item active">
+                  <a class="page-link" href="#"> 1 </a>
+                </li>
+
+                <li class="page-item">
+                  <a class="page-link" href="#"> 2 </a>
+                </li>
+
+                <li class="page-item">
+                  <a class="page-link" href="#"> 3 </a>
+                </li>
+
+                <li class="page-item">
+                  <a class="page-link" href="#"> 4 </a>
+                </li>
+
+                <li class="page-item">
+                  <a class="page-link" href="#">
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+     MOBILE FILTER OFFCANVAS
+========================================================= -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileFilters">
+      <div class="offcanvas-header">
+        <h5 class="fw-bold">Filters</h5>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="filter-group">
+        <h6>Category</h6>
+
+        <div class="form-check">
+          <input
+            class="form-check-input category-filter"
+            type="checkbox"
+            value="tshirts"
+            id="filterTshirts"
+          />
+
+          <label class="form-check-label" for="filterTshirts"> T-Shirts </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input category-filter"
+            type="checkbox"
+            value="scarves"
+            id="filterScarves"
+          />
+
+          <label class="form-check-label" for="filterScarves"> Scarves </label>
+        </div>
+
+        <div class="form-check">
+          <input
+            class="form-check-input category-filter"
+            type="checkbox"
+            value="mugs"
+            id="filterMugs"
+          />
+
+          <label class="form-check-label" for="filterMugs"> Custom Mugs </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+    <footer>
+      <div class="footer-main">
+        <div class="container">
+          <div class="row g-5">
+            <!-- BRAND -->
+
+            <div class="col-lg-4">
+              <a href="index.html" class="footer-logo">
+                <img src="assets/images/printwave-logo.png" alt="PrintWave" />
+              </a>
+
+              <p class="footer-description">
+                Your ideas, printed your way. Custom T-shirts, scarves, mugs and
+                personalized products made for every occasion.
+              </p>
+
+              <div class="social-links mt-4">
+                <a href="#">
+                  <i class="bi bi-instagram"></i>
+                </a>
+
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- SHOP -->
+
+            <div class="col-6 col-lg-2">
+              <h5 class="footer-title">Shop</h5>
+
+              <ul class="footer-links">
+                <li>
+                  <a href="shop.html"> All Products </a>
+                </li>
+
+                <li>
+                  <a href="printed-tshirts.html"> Printed T-Shirts </a>
+                </li>
+
+                <li>
+                  <a href="embroidered-tshirts.html"> Embroidered T-Shirts </a>
+                </li>
+
+                <li>
+                  <a href="printed-scarves.html"> Printed Scarves </a>
+                </li>
+
+                <li>
+                  <a href="mugs.html"> Custom Mugs </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- COLLECTIONS -->
+
+            <div class="col-6 col-lg-2">
+              <h5 class="footer-title">Collections</h5>
+
+              <ul class="footer-links">
+                <li>
+                  <a href="ganesh-chaturthi.html"> Ganesh Chaturthi </a>
+                </li>
+
+                <li>
+                  <a href="diwali.html"> Diwali </a>
+                </li>
+
+                <li>
+                  <a href="holi.html"> Holi </a>
+                </li>
+
+                <li>
+                  <a href="kabaddi.html"> Kabaddi </a>
+                </li>
+
+                <li>
+                  <a href="cricket.html"> Cricket </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- COMPANY -->
+
+            <div class="col-6 col-lg-2">
+              <h5 class="footer-title">Company</h5>
+
+              <ul class="footer-links">
+                <li>
+                  <a href="about.html"> About Us </a>
+                </li>
+
+                <li>
+                  <a href="contact.html"> Contact </a>
+                </li>
+
+                <li>
+                  <a href="#"> Privacy Policy </a>
+                </li>
+
+                <li>
+                  <a href="#"> Terms & Conditions </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="col-lg-2">
+              <h5 class="footer-title">Contact</h5>
+
+              <ul class="footer-links">
+                <li>
+                  <a href="tel:+919999999999">
+                    <i class="bi bi-telephone me-2"></i>
+                    +91 99999 99999
+                  </a>
+                </li>
+
+                <li>
+                  <a href="mailto:hello@printwave.in">
+                    <i class="bi bi-envelope me-2"></i>
+
+                    hello@printwave.in
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="bi bi-geo-alt me-2"></i>
+
+                    Maharashtra, India
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="d-flex justify-content-between flex-wrap gap-2">
+            <span> © 2026 PrintWave. All Rights Reserved. </span>
+
+            <span> Your Ideas • Our Prints </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Product Database -->
+    <script src="assets/js/products.js"></script>
+
+    <!-- Shop Logic -->
+    <script src="assets/js/shop.js"></script>
+
+    <!-- add to cart toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+      <div id="cartToast" class="toast" role="alert">
+        <div class="toast-header">
+          <i class="bi bi-check-circle-fill text-success me-2"></i>
+
+          <strong class="me-auto"> PrintWave </strong>
+
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+          ></button>
+        </div>
+
+        <div class="toast-body">Product added to your cart.</div>
+      </div>
+    </div>
+  </body>
+</html>

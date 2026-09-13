@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Us | PrintWave</title>
+    <meta
+      name="description"
+      content="Learn about PrintWave – your destination for custom printed and embroidered clothing, scarves, mugs and personalized merchandise."
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- About CSS -->
+    <link rel="stylesheet" href="../assets/css/about.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top printwave-navbar"
+    >
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand printwave-logo" href="../index.html">
+          <img src="../assets/images/logo.png" alt="PrintWave" />
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+
+            <!-- Shop -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Shop
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="shop.html"> All Products </a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <h6 class="dropdown-header">T-Shirts</h6>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="shop.html?type=printed">
+                    Printed T-Shirts
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="shop.html?type=embroidered">
+                    Embroidered T-Shirts
+                  </a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <h6 class="dropdown-header">Scarves</h6>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="shop.html?category=scarf&type=printed"
+                  >
+                    Printed Scarves
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="shop.html?category=scarf&type=embroidered"
+                  >
+                    Embroidered Scarves
+                  </a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <a class="dropdown-item" href="shop.html?category=mug">
+                    Custom Mugs
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Custom Design -->
+            <li class="nav-item">
+              <a class="nav-link" href="custom-design.html"> Custom Design </a>
+            </li>
+
+            <!-- Collections -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Collections
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <h6 class="dropdown-header">Festival Collection</h6>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=ganesh"
+                  >
+                    Ganesh Chaturthi
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=diwali"
+                  >
+                    Diwali
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=holi"
+                  >
+                    Holi
+                  </a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <h6 class="dropdown-header">Team Collection</h6>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=kabaddi"
+                  >
+                    Kabaddi
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=cricket"
+                  >
+                    Cricket
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=football"
+                  >
+                    Football
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=college"
+                  >
+                    College Teams
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- About -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">
+                About
+              </a>
+            </li>
+
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- Navbar Actions -->
+          <div class="navbar-actions d-flex align-items-center gap-3">
+            <button
+              class="navbar-action-btn"
+              id="searchButton"
+              type="button"
+              aria-label="Search"
+            >
+              <i class="bi bi-search"></i>
+            </button>
+
+            <a
+              href="cart.html"
+              class="navbar-action-btn cart-icon-wrapper"
+              aria-label="Shopping Cart"
+            >
+              <i class="bi bi-bag"></i>
+              <span id="globalCartCount" class="cart-count">0</span>
+            </a>
+
+            <a
+              href="account.html"
+              class="navbar-action-btn"
+              aria-label="Account"
+            >
+              <i class="bi bi-person"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= SEARCH OVERLAY ================= -->
+
+    <div id="searchOverlay" class="search-overlay">
+      <div class="search-overlay-inner">
+        <button
+          type="button"
+          id="closeSearch"
+          class="search-close"
+          aria-label="Close Search"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+
+        <h2>What are you looking for?</h2>
+
+        <form id="globalSearchForm">
+          <div class="search-input-wrapper">
+            <i class="bi bi-search"></i>
+
+            <input
+              type="search"
+              id="globalSearchInput"
+              placeholder="Search T-shirts, scarves, mugs..."
+              autocomplete="off"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ================= ABOUT HERO ================= -->
+
+    <section class="about-hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="about-eyebrow"> ABOUT PRINTWAVE </span>
+
+            <h1>
+              Wear Your Ideas.
+              <span>Print Your Story.</span>
+            </h1>
+
+            <p class="about-hero-text">
+              PrintWave is a creative customization platform where your ideas
+              become something you can actually wear, use and share.
+            </p>
+
+            <div class="about-hero-buttons">
+              <a
+                href="custom-design.html"
+                class="btn btn-primary printwave-btn"
+              >
+                Start Designing
+                <i class="bi bi-arrow-right"></i>
+              </a>
+
+              <a href="collections.html" class="btn btn-outline-dark">
+                Explore Collections
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="about-hero-visual">
+              <div class="hero-shape shape-one"></div>
+              <div class="hero-shape shape-two"></div>
+
+              <div class="about-visual-card main-card">
+                <div class="visual-shirt">
+                  <i class="bi bi-stars"></i>
+                </div>
+
+                <div class="visual-card-content">
+                  <strong>Make It Yours</strong>
+                  <span>Designed by you</span>
+                </div>
+              </div>
+
+              <div class="floating-card floating-card-one">
+                <i class="bi bi-brush"></i>
+                <span>Custom Designs</span>
+              </div>
+
+              <div class="floating-card floating-card-two">
+                <i class="bi bi-heart"></i>
+                <span>Made With Care</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUR STORY ================= -->
+
+    <section class="about-story section-padding">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="story-image-wrapper">
+              <div class="story-image-placeholder">
+                <i class="bi bi-palette"></i>
+
+                <span> Your Idea </span>
+
+                <strong> Our Print </strong>
+              </div>
+
+              <div class="story-badge">
+                <strong>100%</strong>
+                <span>Creative Freedom</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <span class="section-label"> OUR STORY </span>
+
+            <h2>
+              More Than Just
+              <span>Printing.</span>
+            </h2>
+
+            <p>
+              PrintWave was created around a simple idea: clothing and everyday
+              products should give people a way to express themselves.
+            </p>
+
+            <p>
+              Whether it's your favourite quote, a memorable photograph, your
+              college team, a festival design, or your own artwork, we make it
+              possible to turn that idea into a personalized product.
+            </p>
+
+            <p>
+              From printed and embroidered T-shirts to scarves and personalized
+              mugs, PrintWave brings customization into one simple online
+              experience.
+            </p>
+
+            <a href="shop.html" class="story-link">
+              Explore our products
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHAT WE DO ================= -->
+
+    <section class="what-we-do section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-label"> WHAT WE DO </span>
+
+          <h2>
+            Turn Ideas Into
+            <span>Something Real</span>
+          </h2>
+
+          <p>
+            Choose a product, customize it your way, and make it uniquely yours.
+          </p>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-person-badge"></i>
+              </div>
+
+              <h3>Custom T-Shirts</h3>
+
+              <p>
+                Create printed or embroidered T-shirts using your own designs,
+                text and artwork.
+              </p>
+
+              <a href="shop.html?category=tshirt">
+                Explore T-Shirts
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-grid-3x3-gap"></i>
+              </div>
+
+              <h3>Custom Scarves</h3>
+
+              <p>
+                Design unique printed and embroidered scarves for individuals,
+                teams and events.
+              </p>
+
+              <a href="shop.html?category=scarf">
+                Explore Scarves
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-cup-hot"></i>
+              </div>
+
+              <h3>Personalized Mugs</h3>
+
+              <p>
+                Turn photos, names, quotes and artwork into personalized coffee
+                mugs.
+              </p>
+
+              <a href="shop.html?category=mug">
+                Explore Mugs
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-people"></i>
+              </div>
+
+              <h3>Team Merchandise</h3>
+
+              <p>
+                Create merchandise for colleges, sports teams, groups, events
+                and communities.
+              </p>
+
+              <a href="collections.html?collection=college">
+                Explore Teams
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY PRINTWAVE ================= -->
+
+    <section class="why-printwave section-padding">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5">
+            <span class="section-label"> WHY PRINTWAVE </span>
+
+            <h2>
+              Your Design.
+              <span>Your Rules.</span>
+            </h2>
+
+            <p>
+              We believe customization shouldn't be complicated. That's why
+              PrintWave is designed to make the entire process simple and
+              enjoyable.
+            </p>
+
+            <a href="custom-design.html" class="btn btn-primary printwave-btn">
+              Create Your Design
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="why-card">
+                  <i class="bi bi-brush"></i>
+
+                  <h3>Creative Freedom</h3>
+
+                  <p>
+                    Add your own artwork, images, text and ideas to create
+                    something unique.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="why-card">
+                  <i class="bi bi-stars"></i>
+
+                  <h3>Quality Focus</h3>
+
+                  <p>
+                    We focus on creating products that look great and feel ready
+                    to wear.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="why-card">
+                  <i class="bi bi-lightning-charge"></i>
+
+                  <h3>Simple Experience</h3>
+
+                  <p>
+                    From product selection to checkout, everything is designed
+                    to be easy.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="why-card">
+                  <i class="bi bi-box-seam"></i>
+
+                  <h3>Made For Everyone</h3>
+
+                  <p>
+                    Individuals, friends, teams, colleges and businesses can all
+                    create their own.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="how-it-works section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-label"> HOW IT WORKS </span>
+
+          <h2>
+            From Idea To
+            <span>Product</span>
+          </h2>
+        </div>
+
+        <div class="process-wrapper">
+          <div class="process-step">
+            <div class="process-number">01</div>
+
+            <div class="process-icon">
+              <i class="bi bi-bag"></i>
+            </div>
+
+            <h3>Choose</h3>
+
+            <p>
+              Pick a T-shirt, scarf, mug or another product you want to
+              customize.
+            </p>
+          </div>
+
+          <div class="process-line"></div>
+
+          <div class="process-step">
+            <div class="process-number">02</div>
+
+            <div class="process-icon">
+              <i class="bi bi-brush"></i>
+            </div>
+
+            <h3>Design</h3>
+
+            <p>
+              Upload your artwork or add text and create your personalized
+              design.
+            </p>
+          </div>
+
+          <div class="process-line"></div>
+
+          <div class="process-step">
+            <div class="process-number">03</div>
+
+            <div class="process-icon">
+              <i class="bi bi-eye"></i>
+            </div>
+
+            <h3>Preview</h3>
+
+            <p>
+              Check your design and make changes until everything looks right.
+            </p>
+          </div>
+
+          <div class="process-line"></div>
+
+          <div class="process-step">
+            <div class="process-number">04</div>
+
+            <div class="process-icon">
+              <i class="bi bi-truck"></i>
+            </div>
+
+            <h3>Order</h3>
+
+            <p>
+              Place your order and we'll take care of getting your creation to
+              you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= COLLECTIONS PREVIEW ================= -->
+
+    <section class="about-collections section-padding">
+      <div class="container">
+        <div class="section-heading text-center">
+          <span class="section-label"> EXPLORE PRINTWAVE </span>
+
+          <h2>
+            Collections For
+            <span>Every Occasion</span>
+          </h2>
+
+          <p>
+            Celebrate festivals, represent your team, or create something
+            completely your own.
+          </p>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-6">
+            <a
+              href="collections.html?collection=ganesh"
+              class="collection-preview-card festival-card"
+            >
+              <div class="collection-preview-content">
+                <span>FESTIVAL COLLECTION</span>
+
+                <h3>
+                  Celebrate
+                  <br />
+                  Your Way
+                </h3>
+
+                <p>Ganesh Chaturthi, Diwali, Holi and more.</p>
+
+                <strong>
+                  Explore Festival Collection
+                  <i class="bi bi-arrow-right"></i>
+                </strong>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a
+              href="collections.html?collection=cricket"
+              class="collection-preview-card team-card"
+            >
+              <div class="collection-preview-content">
+                <span>TEAM COLLECTION</span>
+
+                <h3>
+                  Play Together.
+                  <br />
+                  Wear Together.
+                </h3>
+
+                <p>Cricket, Kabaddi, Football and College Teams.</p>
+
+                <strong>
+                  Explore Team Collection
+                  <i class="bi bi-arrow-right"></i>
+                </strong>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+
+    <section class="about-cta">
+      <div class="container">
+        <div class="about-cta-content text-center">
+          <span class="section-label"> YOUR TURN </span>
+
+          <h2>
+            Have An Idea?
+            <span>Let's Print It.</span>
+          </h2>
+
+          <p>
+            Create something that is completely yours. Your design, your
+            product, your PrintWave.
+          </p>
+
+          <a href="custom-design.html" class="btn btn-light about-cta-btn">
+            Start Customizing
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="printwave-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <img
+              src="assets/images/logo.png"
+              alt="PrintWave"
+              class="footer-logo"
+            />
+
+            <p>
+              Wear your ideas. Print your story. Create custom products made for
+              you.
+            </p>
+
+            <div class="footer-socials">
+              <a href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" aria-label="Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h5>Shop</h5>
+
+            <a href="shop.html">All Products</a>
+            <a href="shop.html?category=tshirt">T-Shirts</a>
+            <a href="shop.html?category=scarf">Scarves</a>
+            <a href="shop.html?category=mug">Mugs</a>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h5>Collections</h5>
+
+            <a href="collections.html?collection=ganesh"> Ganesh Chaturthi </a>
+
+            <a href="collections.html?collection=diwali"> Diwali </a>
+
+            <a href="collections.html?collection=holi"> Holi </a>
+
+            <a href="collections.html?collection=cricket"> Team Collection </a>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h5>Company</h5>
+
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+            <a href="account.html">My Account</a>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h5>Help</h5>
+
+            <a href="cart.html">Cart</a>
+            <a href="checkout.html">Checkout</a>
+            <a href="#">Shipping</a>
+            <a href="#">FAQs</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="footerYear"></span> PrintWave. All rights reserved.</p>
+
+          <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Global JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- About JS -->
+    <script src="../assets/js/about.js"></script>
+  </body>
+</html>

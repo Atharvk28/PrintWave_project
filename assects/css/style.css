@@ -1,0 +1,497 @@
+/* =========================================================
+   PRINTWAVE - GLOBAL CSS
+   Shared across all pages
+========================================================= */
+
+:root {
+  --pw-black: #111111;
+  --pw-dark: #1a1a1a;
+  --pw-gray: #666666;
+  --pw-light: #f7f7f7;
+  --pw-border: #e5e5e5;
+  --pw-white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  color: var(--pw-black);
+  background: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.printwave-navbar {
+  min-height: 78px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid var(--pw-border);
+
+  z-index: 1000;
+}
+
+.printwave-logo {
+  width: 145px;
+  height: auto;
+  max-height: 55px;
+  display: block;
+}
+
+.navbar-nav {
+  gap: 3px;
+}
+
+.nav-link {
+  color: #333333 !important;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 10px 13px !important;
+
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #000000 !important;
+}
+
+.nav-link.active {
+  color: #000000 !important;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CUSTOM DESIGN NAV LINK
+========================================================= */
+
+.custom-design-link {
+  font-weight: 600 !important;
+}
+
+.custom-design-link i {
+  margin-right: 4px;
+}
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.dropdown-menu {
+  border: 1px solid var(--pw-border);
+
+  border-radius: 10px;
+
+  padding: 8px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-item {
+  font-size: 13px;
+
+  border-radius: 7px;
+
+  padding: 8px 12px;
+
+  transition: 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #f3f3f3;
+}
+
+.dropdown-header {
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+
+  color: #777777;
+}
+
+/* =========================================================
+   NAVBAR ACTIONS
+========================================================= */
+
+.navbar-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.nav-icon-btn {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  background: transparent;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  font-size: 18px;
+
+  color: #111111;
+
+  transition: 0.2s ease;
+}
+
+.nav-icon-btn:hover {
+  background: #f3f3f3;
+
+  color: #000000;
+}
+
+/* =========================================================
+   CART COUNT
+========================================================= */
+
+.cart-icon-wrapper {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+
+  top: 1px;
+  right: 0;
+
+  width: 17px;
+  height: 17px;
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   SEARCH OVERLAY
+========================================================= */
+
+.search-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  background: rgba(0, 0, 0, 0.55);
+
+  display: none;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  padding-top: 120px;
+}
+
+.search-overlay.active {
+  display: flex;
+}
+
+.search-box {
+  width: min(600px, 90%);
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  padding: 35px;
+
+  position: relative;
+
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+}
+
+.search-box h3 {
+  margin-bottom: 25px;
+
+  font-size: 23px;
+
+  font-weight: 600;
+}
+
+.close-search {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  width: 35px;
+  height: 35px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f3f3f3;
+
+  cursor: pointer;
+}
+
+.search-input-wrapper {
+  height: 55px;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 16px;
+
+  margin-bottom: 15px;
+}
+
+.search-input-wrapper i {
+  color: #777777;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  padding: 0 12px;
+
+  font-size: 13px;
+}
+
+.search-submit {
+  width: 100%;
+
+  height: 48px;
+
+  border-radius: 8px;
+}
+
+/* =========================================================
+   GLOBAL BUTTONS
+========================================================= */
+
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn-dark {
+  background: #111111;
+
+  border-color: #111111;
+}
+
+.btn-dark:hover {
+  background: #333333;
+
+  border-color: #333333;
+}
+
+/* =========================================================
+   GLOBAL FOOTER
+========================================================= */
+
+.footer {
+  background: #111111;
+
+  color: #ffffff;
+
+  padding: 70px 0 25px;
+}
+
+.footer-logo {
+  width: 135px;
+
+  height: auto;
+
+  margin-bottom: 18px;
+
+  filter: brightness(0) invert(1);
+}
+
+.footer p {
+  max-width: 260px;
+
+  color: #999999;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.footer h6 {
+  margin-bottom: 20px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.footer a {
+  display: block;
+
+  color: #999999;
+
+  font-size: 12px;
+
+  margin-bottom: 11px;
+
+  transition: 0.2s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.footer hr {
+  border-color: #333333;
+
+  margin: 45px 0 20px;
+}
+
+.footer-bottom {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #666666;
+
+  font-size: 11px;
+}
+
+.social-icons {
+  display: flex;
+
+  gap: 8px;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid #333333;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+}
+
+/* =========================================================
+   COMMON SECTION LABEL
+========================================================= */
+
+.section-label {
+  display: inline-block;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   RESPONSIVE NAVBAR
+========================================================= */
+
+@media (max-width: 991px) {
+  .navbar-actions {
+    margin-top: 12px;
+
+    padding-bottom: 15px;
+  }
+
+  .navbar-nav {
+    padding-top: 10px;
+  }
+
+  .printwave-logo {
+    width: 125px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+  .footer {
+    padding-top: 50px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .search-overlay {
+    padding-top: 80px;
+  }
+
+  .search-box {
+    padding: 25px 20px;
+  }
+}

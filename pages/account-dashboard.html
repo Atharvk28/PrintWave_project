@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Account | PrintWave</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Account Dashboard CSS -->
+    <link rel="stylesheet" href="../assets/css/account-dashboard.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+      <div class="container">
+        <!-- Logo -->
+        <!-- <a class="navbar-brand" href="../index.html">
+          <img src="../assets/images/printwave-logo.png" alt="PrintWave" />
+        </a> -->
+
+        <!-- Mobile Toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#printwaveNavbar"
+          aria-controls="printwaveNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation -->
+        <div class="collapse navbar-collapse" id="printwaveNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"> Home </a>
+            </li>
+
+            <!-- Shop -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Shop
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="shop.html"> All Products </a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <h6 class="dropdown-header">T-Shirts</h6>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="shop.html?category=tshirt&type=printed"
+                  >
+                    Printed T-Shirts
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="shop.html?category=tshirt&type=embroidered"
+                  >
+                    Embroidered T-Shirts
+                  </a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <h6 class="dropdown-header">Scarves</h6>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="shop.html?category=scarf&type=printed"
+                  >
+                    Printed Scarves
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="shop.html?category=scarf&type=embroidered"
+                  >
+                    Embroidered Scarves
+                  </a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <a class="dropdown-item" href="shop.html?category=mug">
+                    Custom Mugs
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Custom Design -->
+            <li class="nav-item">
+              <a class="nav-link" href="custom-design.html"> Custom Design </a>
+            </li>
+
+            <!-- Collections -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Collections
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <h6 class="dropdown-header">Festival Collection</h6>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=ganesh"
+                  >
+                    Ganesh Chaturthi
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=diwali"
+                  >
+                    Diwali
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=holi"
+                  >
+                    Holi
+                  </a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+
+                <li>
+                  <h6 class="dropdown-header">Team Collection</h6>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=kabaddi"
+                  >
+                    Kabaddi
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=cricket"
+                  >
+                    Cricket
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=football"
+                  >
+                    Football
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="collections.html?collection=college"
+                  >
+                    College Teams
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"> About </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Contact </a>
+            </li>
+          </ul>
+
+          <!-- Navbar Actions -->
+          <div class="navbar-actions d-flex align-items-center gap-3">
+            <!-- Search -->
+            <a
+              href="shop.html"
+              class="nav-action"
+              aria-label="Search"
+              title="Search"
+            >
+              <i class="bi bi-search"></i>
+            </a>
+
+            <!-- Cart -->
+            <a
+              href="cart.html"
+              class="nav-action cart-action"
+              aria-label="Cart"
+              title="Cart"
+            >
+              <i class="bi bi-bag"></i>
+
+              <span id="cartCount" class="cart-count"> 0 </span>
+            </a>
+
+            <!-- Account -->
+            <a
+              href="account-dashboard.html"
+              class="nav-action active"
+              aria-label="Account"
+              title="My Account"
+            >
+              <i class="bi bi-person"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+    <main class="dashboard-page">
+      <div class="container dashboard-container">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+          <div>
+            <h1 class="dashboard-title">My Account</h1>
+
+            <p class="dashboard-subtitle">
+              Manage your PrintWave account, orders and designs.
+            </p>
+          </div>
+
+          <div class="dashboard-welcome">
+            <small>Welcome back</small>
+
+            <strong id="welcomeName"> PrintWave Customer </strong>
+          </div>
+        </div>
+
+        <!-- Dashboard Layout -->
+        <div class="dashboard-layout">
+          <!-- =================================================
+                 SIDEBAR
+            ================================================== -->
+
+          <aside class="dashboard-sidebar">
+            <!-- Mini Profile -->
+            <div class="profile-mini">
+              <div class="profile-avatar" id="profileAvatar">P</div>
+
+              <div>
+                <h5 id="sidebarUserName">Customer</h5>
+
+                <p id="sidebarUserEmail">customer@example.com</p>
+              </div>
+            </div>
+
+            <!-- Menu -->
+            <div class="dashboard-menu">
+              <button type="button" class="active" data-panel="overviewPanel">
+                <i class="bi bi-grid me-2"></i>
+                Overview
+              </button>
+
+              <button type="button" data-panel="profilePanel">
+                <i class="bi bi-person me-2"></i>
+                My Profile
+              </button>
+
+              <button type="button" data-panel="ordersPanel">
+                <i class="bi bi-box-seam me-2"></i>
+                My Orders
+              </button>
+
+              <button type="button" data-panel="wishlistPanel">
+                <i class="bi bi-heart me-2"></i>
+                Wishlist
+              </button>
+
+              <button type="button" data-panel="addressesPanel">
+                <i class="bi bi-geo-alt me-2"></i>
+                Addresses
+              </button>
+
+              <button type="button" data-panel="designsPanel">
+                <i class="bi bi-palette me-2"></i>
+                My Designs
+              </button>
+
+              <button type="button" class="logout-btn" id="logoutBtn">
+                <i class="bi bi-box-arrow-right me-2"></i>
+                Logout
+              </button>
+            </div>
+          </aside>
+
+          <!-- =================================================
+                 MAIN DASHBOARD CONTENT
+            ================================================== -->
+
+          <section class="dashboard-content">
+            <!-- =================================================
+                     OVERVIEW PANEL
+                ================================================== -->
+
+            <div class="dashboard-panel active" id="overviewPanel">
+              <!-- Statistics -->
+              <div class="overview-grid">
+                <div class="overview-card">
+                  <div class="overview-card-icon">
+                    <i class="bi bi-box-seam"></i>
+                  </div>
+
+                  <h3 id="totalOrders">0</h3>
+
+                  <p>Total Orders</p>
+                </div>
+
+                <div class="overview-card">
+                  <div class="overview-card-icon">
+                    <i class="bi bi-heart"></i>
+                  </div>
+
+                  <h3 id="totalWishlist">0</h3>
+
+                  <p>Wishlist Items</p>
+                </div>
+
+                <div class="overview-card">
+                  <div class="overview-card-icon">
+                    <i class="bi bi-palette"></i>
+                  </div>
+
+                  <h3 id="totalDesigns">0</h3>
+
+                  <p>Custom Designs</p>
+                </div>
+              </div>
+
+              <!-- Recent Orders -->
+              <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                  <h4>Recent Orders</h4>
+
+                  <a href="#" data-open-panel="ordersPanel"> View All </a>
+                </div>
+
+                <div class="order-list" id="recentOrders">
+                  <div class="dashboard-empty">
+                    <div class="dashboard-empty-icon">
+                      <i class="bi bi-box-seam"></i>
+                    </div>
+
+                    <h5>No orders yet</h5>
+
+                    <p>Your orders will appear here.</p>
+
+                    <a
+                      href="shop.html"
+                      class="pw-primary-btn text-decoration-none d-inline-block"
+                    >
+                      Start Shopping
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Actions -->
+              <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                  <h4>Quick Actions</h4>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2">
+                  <a
+                    href="shop.html"
+                    class="pw-primary-btn text-decoration-none"
+                  >
+                    <i class="bi bi-bag me-1"></i>
+                    Shop Now
+                  </a>
+
+                  <a
+                    href="custom-design.html"
+                    class="pw-secondary-btn text-decoration-none"
+                  >
+                    <i class="bi bi-palette me-1"></i>
+                    Create Design
+                  </a>
+
+                  <a
+                    href="cart.html"
+                    class="pw-secondary-btn text-decoration-none"
+                  >
+                    <i class="bi bi-cart me-1"></i>
+                    View Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     PROFILE PANEL
+                ================================================== -->
+
+            <div class="dashboard-panel" id="profilePanel">
+              <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                  <h4>My Profile</h4>
+                </div>
+
+                <form id="profileForm" class="profile-form">
+                  <div class="profile-field">
+                    <label for="profileFirstName"> First Name </label>
+
+                    <input
+                      type="text"
+                      id="profileFirstName"
+                      name="firstName"
+                      placeholder="Enter first name"
+                    />
+                  </div>
+
+                  <div class="profile-field">
+                    <label for="profileLastName"> Last Name </label>
+
+                    <input
+                      type="text"
+                      id="profileLastName"
+                      name="lastName"
+                      placeholder="Enter last name"
+                    />
+                  </div>
+
+                  <div class="profile-field">
+                    <label for="profileEmail"> Email Address </label>
+
+                    <input
+                      type="email"
+                      id="profileEmail"
+                      name="email"
+                      placeholder="Enter email"
+                    />
+                  </div>
+
+                  <div class="profile-field">
+                    <label for="profilePhone"> Phone Number </label>
+
+                    <input
+                      type="tel"
+                      id="profilePhone"
+                      name="phone"
+                      placeholder="Enter phone number"
+                    />
+                  </div>
+
+                  <div class="profile-field full-width">
+                    <label for="profileBio"> About You </label>
+
+                    <textarea
+                      id="profileBio"
+                      name="bio"
+                      rows="4"
+                      placeholder="Tell us a little about yourself..."
+                    ></textarea>
+                  </div>
+
+                  <div class="full-width">
+                    <button type="submit" class="pw-primary-btn">
+                      <i class="bi bi-check2 me-1"></i>
+                      Save Changes
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     ORDERS PANEL
+                ================================================== -->
+
+            <div class="dashboard-panel" id="ordersPanel">
+              <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                  <h4>My Orders</h4>
+                </div>
+
+                <div class="order-list" id="allOrders">
+                  <div class="dashboard-empty">
+                    <div class="dashboard-empty-icon">
+                      <i class="bi bi-box-seam"></i>
+                    </div>
+
+                    <h5>No orders found</h5>
+
+                    <p>Once you place an order, it will appear here.</p>
+
+                    <a
+                      href="shop.html"
+                      class="pw-primary-btn text-decoration-none d-inline-block"
+                    >
+                      Browse Products
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     WISHLIST PANEL
+                ================================================== -->
+
+            <div class="dashboard-panel" id="wishlistPanel">
+              <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                  <h4>My Wishlist</h4>
+                </div>
+
+                <div class="wishlist-grid" id="wishlistGrid">
+                  <div class="dashboard-empty">
+                    <div class="dashboard-empty-icon">
+                      <i class="bi bi-heart"></i>
+                    </div>
+
+                    <h5>Your wishlist is empty</h5>
+
+                    <p>Save products you love and find them here later.</p>
+
+                    <a
+                      href="shop.html"
+                      class="pw-primary-btn text-decoration-none d-inline-block"
+                    >
+                      Explore Products
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     ADDRESSES PANEL
+                ================================================== -->
+
+            <div class="dashboard-panel" id="addressesPanel">
+              <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                  <h4>Saved Addresses</h4>
+
+                  <button
+                    type="button"
+                    class="pw-primary-btn"
+                    id="addAddressBtn"
+                  >
+                    <i class="bi bi-plus-lg me-1"></i>
+                    Add Address
+                  </button>
+                </div>
+
+                <div class="address-grid" id="addressGrid">
+                  <div class="dashboard-empty">
+                    <div class="dashboard-empty-icon">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h5>No saved addresses</h5>
+
+                    <p>Add an address for faster checkout.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- =================================================
+                     DESIGNS PANEL
+                ================================================== -->
+
+            <div class="dashboard-panel" id="designsPanel">
+              <div class="dashboard-card">
+                <div class="dashboard-card-header">
+                  <h4>My Designs</h4>
+
+                  <a href="custom-design.html"> Create New </a>
+                </div>
+
+                <div class="design-empty">
+                  <div class="design-empty-icon">🎨</div>
+
+                  <h5>Your custom designs</h5>
+
+                  <p>
+                    Create personalized T-shirts, scarves and mugs with the
+                    PrintWave Design Studio.
+                  </p>
+
+                  <a
+                    href="custom-design.html"
+                    class="pw-primary-btn text-decoration-none d-inline-block"
+                  >
+                    Create a Design
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- =====================================================
+     FOOTER
+===================================================== -->
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-3 mb-md-0">
+            <h5 class="mb-1">PrintWave</h5>
+
+            <p class="mb-0 text-white-50 small">Your ideas. Our prints.</p>
+          </div>
+
+          <div class="col-md-6 text-md-end">
+            <div class="mb-2">
+              <a
+                href="../index.html"
+                class="text-white text-decoration-none me-3"
+              >
+                Home
+              </a>
+
+              <a href="shop.html" class="text-white text-decoration-none me-3">
+                Shop
+              </a>
+
+              <a href="contact.html" class="text-white text-decoration-none">
+                Contact
+              </a>
+            </div>
+
+            <small class="text-white-50">
+              © <span id="footerYear"></span> PrintWave. All rights reserved.
+            </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+     BOOTSTRAP JS
+===================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- =====================================================
+     GLOBAL JS
+===================================================== -->
+
+    <script src="../assects/js/main.js"></script>
+
+    <!-- =====================================================
+     ACCOUNT DASHBOARD JS
+===================================================== -->
+
+    <script src="../assects/js/account-dashboard.js"></script>
+  </body>
+</html>
