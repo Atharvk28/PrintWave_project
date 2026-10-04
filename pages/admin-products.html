@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Products | PrintWave Admin</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/admin-products.css">
+</head>
+
+<body>
+
+  <!-- ================= TOPBAR ================= -->
+
+  <header class="admin-topbar">
+
+    <div class="admin-brand">
+      <a href="../index.html">
+        <img src="../assets/images/printwave-logo.png" alt="PrintWave" class="admin-logo">
+      </a>
+
+      <span>Admin Panel</span>
+    </div>
+
+    <div class="admin-top-actions">
+
+      <a href="../index.html" class="view-store">
+        <i class="bi bi-shop"></i>
+        <span>View Store</span>
+      </a>
+
+      <div class="admin-profile">
+        <div class="admin-avatar">
+          <i class="bi bi-person"></i>
+        </div>
+
+        <div>
+          <strong>Administrator</strong>
+          <small>Admin</small>
+        </div>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= LAYOUT ================= -->
+
+  <div class="admin-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="admin-sidebar">
+
+      <div class="sidebar-menu">
+
+        <a href="admin-dashboard.html">
+          <i class="bi bi-grid-1x2"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="admin-products.html" class="active">
+          <i class="bi bi-box-seam"></i>
+          <span>Products</span>
+        </a>
+
+        <a href="#">
+          <i class="bi bi-bag-check"></i>
+          <span>Orders</span>
+        </a>
+
+        <a href="#">
+          <i class="bi bi-people"></i>
+          <span>Customers</span>
+        </a>
+
+        <a href="#">
+          <i class="bi bi-palette"></i>
+          <span>Custom Designs</span>
+        </a>
+
+        <a href="#">
+          <i class="bi bi-ticket-perforated"></i>
+          <span>Coupons</span>
+        </a>
+
+        <a href="#">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <a href="../index.html">
+          <i class="bi bi-shop"></i>
+          <span>View Store</span>
+        </a>
+
+        <button id="adminLogout" class="sidebar-logout">
+          <i class="bi bi-box-arrow-right"></i>
+          <span>Logout</span>
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="admin-main">
+
+      <!-- PAGE HEADER -->
+
+      <div class="page-header">
+
+        <div>
+          <div class="breadcrumb-text">
+            Admin / Products
+          </div>
+
+          <h1>Products</h1>
+
+          <p>
+            Manage your PrintWave products, pricing, stock and collections.
+          </p>
+        </div>
+
+        <button class="btn-add-product" id="openAddProduct">
+
+          <i class="bi bi-plus-lg"></i>
+
+          Add Product
+
+        </button>
+
+      </div>
+
+
+      <!-- ================= STAT CARDS ================= -->
+
+      <div class="product-stats">
+
+        <div class="product-stat-card">
+
+          <div class="stat-icon">
+            <i class="bi bi-box-seam"></i>
+          </div>
+
+          <div>
+            <span>Total Products</span>
+            <strong id="totalProducts">0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="product-stat-card">
+
+          <div class="stat-icon">
+            <i class="bi bi-check-circle"></i>
+          </div>
+
+          <div>
+            <span>Active Products</span>
+            <strong id="activeProducts">0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="product-stat-card">
+
+          <div class="stat-icon">
+            <i class="bi bi-exclamation-triangle"></i>
+          </div>
+
+          <div>
+            <span>Low Stock</span>
+            <strong id="lowStockProducts">0</strong>
+          </div>
+
+        </div>
+
+
+        <div class="product-stat-card">
+
+          <div class="stat-icon">
+            <i class="bi bi-x-circle"></i>
+          </div>
+
+          <div>
+            <span>Out of Stock</span>
+            <strong id="outStockProducts">0</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ================= FILTER BAR ================= -->
+
+      <section class="products-section">
+
+        <div class="products-toolbar">
+
+          <div class="search-box">
+
+            <i class="bi bi-search"></i>
+
+            <input type="text" id="productSearch" placeholder="Search products...">
+
+          </div>
+
+
+          <select id="categoryFilter">
+
+            <option value="all">All Categories</option>
+
+            <option value="tshirt">T-Shirts</option>
+
+            <option value="scarf">Scarves</option>
+
+            <option value="mug">Mugs</option>
+
+          </select>
+
+
+          <select id="collectionFilter">
+
+            <option value="all">All Collections</option>
+
+            <option value="ganesh">Ganesh Chaturthi</option>
+
+            <option value="diwali">Diwali</option>
+
+            <option value="holi">Holi</option>
+
+            <option value="kabaddi">Kabaddi</option>
+
+            <option value="cricket">Cricket</option>
+
+            <option value="football">Football</option>
+
+            <option value="college">College Teams</option>
+
+          </select>
+
+
+          <select id="stockFilter">
+
+            <option value="all">All Stock</option>
+
+            <option value="in-stock">In Stock</option>
+
+            <option value="low-stock">Low Stock</option>
+
+            <option value="out-stock">Out of Stock</option>
+
+          </select>
+
+        </div>
+
+
+        <!-- PRODUCT TABLE -->
+
+        <div class="table-wrapper">
+
+          <table class="products-table">
+
+            <thead>
+
+              <tr>
+
+                <th>Product</th>
+
+                <th>Category</th>
+
+                <th>Collection</th>
+
+                <th>Price</th>
+
+                <th>Stock</th>
+
+                <th>Status</th>
+
+                <th>Actions</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody id="productsTableBody">
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div id="emptyProducts" class="empty-products">
+
+          <i class="bi bi-box-seam"></i>
+
+          <h3>No products found</h3>
+
+          <p>
+            Try changing your search or filter.
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- ================= ADD / EDIT MODAL ================= -->
+
+  <div class="product-modal" id="productModal">
+
+    <div class="modal-card">
+
+      <div class="modal-header-custom">
+
+        <div>
+
+          <h2 id="modalTitle">
+            Add Product
+          </h2>
+
+          <p>
+            Enter product information below.
+          </p>
+
+        </div>
+
+        <button id="closeProductModal" class="close-modal">
+          <i class="bi bi-x-lg"></i>
+        </button>
+
+      </div>
+
+
+      <form id="productForm">
+
+        <input type="hidden" id="productId">
+
+
+        <div class="form-grid">
+
+          <!-- PRODUCT NAME -->
+
+          <div class="form-group full">
+
+            <label>
+              Product Name *
+            </label>
+
+            <input type="text" id="productName" required placeholder="Example: Custom Printed T-Shirt">
+
+          </div>
+
+
+          <!-- CATEGORY -->
+
+          <div class="form-group">
+
+            <label>
+              Category *
+            </label>
+
+            <select id="productCategory" required>
+
+              <option value="">Select Category</option>
+
+              <option value="tshirt">
+                T-Shirt
+              </option>
+
+              <option value="scarf">
+                Scarf
+              </option>
+
+              <option value="mug">
+                Mug
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- TYPE -->
+
+          <div class="form-group">
+
+            <label>
+              Product Type
+            </label>
+
+            <select id="productType">
+
+              <option value="printed">
+                Printed
+              </option>
+
+              <option value="embroidered">
+                Embroidered
+              </option>
+
+              <option value="custom">
+                Custom
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- COLLECTION -->
+
+          <div class="form-group">
+
+            <label>
+              Collection
+            </label>
+
+            <select id="productCollection">
+
+              <option value="">None</option>
+
+              <option value="ganesh">
+                Ganesh Chaturthi
+              </option>
+
+              <option value="diwali">
+                Diwali
+              </option>
+
+              <option value="holi">
+                Holi
+              </option>
+
+              <option value="kabaddi">
+                Kabaddi
+              </option>
+
+              <option value="cricket">
+                Cricket
+              </option>
+
+              <option value="football">
+                Football
+              </option>
+
+              <option value="college">
+                College Teams
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- BADGE -->
+
+          <div class="form-group">
+
+            <label>
+              Badge
+            </label>
+
+            <select id="productBadge">
+
+              <option value="">
+                None
+              </option>
+
+              <option value="New">
+                New
+              </option>
+
+              <option value="Popular">
+                Popular
+              </option>
+
+              <option value="Bestseller">
+                Bestseller
+              </option>
+
+              <option value="Sale">
+                Sale
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <!-- PRICE -->
+
+          <div class="form-group">
+
+            <label>
+              Price (₹) *
+            </label>
+
+            <input type="number" id="productPrice" min="0" required placeholder="499">
+
+          </div>
+
+
+          <!-- OLD PRICE -->
+
+          <div class="form-group">
+
+            <label>
+              Old Price (₹)
+            </label>
+
+            <input type="number" id="productOldPrice" min="0" placeholder="699">
+
+          </div>
+
+
+          <!-- STOCK -->
+
+          <div class="form-group">
+
+            <label>
+              Stock *
+            </label>
+
+            <input type="number" id="productStock" min="0" required value="10">
+
+          </div>
+
+
+          <!-- IMAGE -->
+
+          <div class="form-group full">
+
+            <label>
+              Product Image
+            </label>
+
+            <input type="text" id="productImage" placeholder="assets/images/products/product.jpg">
+
+            <small>
+              Enter the image path for now.
+            </small>
+
+          </div>
+
+
+          <!-- SIZES -->
+
+          <div class="form-group full">
+
+            <label>
+              Sizes
+            </label>
+
+            <div class="checkbox-group">
+
+              <label>
+                <input type="checkbox" value="S" class="size-option">
+                S
+              </label>
+
+              <label>
+                <input type="checkbox" value="M" class="size-option">
+                M
+              </label>
+
+              <label>
+                <input type="checkbox" value="L" class="size-option">
+                L
+              </label>
+
+              <label>
+                <input type="checkbox" value="XL" class="size-option">
+                XL
+              </label>
+
+              <label>
+                <input type="checkbox" value="XXL" class="size-option">
+                XXL
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <!-- COLORS -->
+
+          <div class="form-group full">
+
+            <label>
+              Colors
+            </label>
+
+            <div class="checkbox-group">
+
+              <label>
+                <input type="checkbox" value="White" class="color-option">
+                White
+              </label>
+
+              <label>
+                <input type="checkbox" value="Black" class="color-option">
+                Black
+              </label>
+
+              <label>
+                <input type="checkbox" value="Red" class="color-option">
+                Red
+              </label>
+
+              <label>
+                <input type="checkbox" value="Blue" class="color-option">
+                Blue
+              </label>
+
+              <label>
+                <input type="checkbox" value="Yellow" class="color-option">
+                Yellow
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <!-- DESCRIPTION -->
+
+          <div class="form-group full">
+
+            <label>
+              Description
+            </label>
+
+            <textarea id="productDescription" rows="4" placeholder="Describe the product..."></textarea>
+
+          </div>
+
+
+          <!-- CUSTOMIZABLE -->
+
+          <div class="form-group full">
+
+            <label class="switch-row">
+
+              <input type="checkbox" id="productCustomizable">
+
+              <span>
+                Allow customers to customize this product
+              </span>
+
+            </label>
+
+          </div>
+
+        </div>
+
+
+        <div class="modal-actions">
+
+          <button type="button" class="btn-cancel" id="cancelProduct">
+            Cancel
+          </button>
+
+          <button type="submit" class="btn-save">
+            <i class="bi bi-check-lg"></i>
+            Save Product
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- TOAST -->
+
+  <div id="adminToast" class="admin-toast">
+    Product saved successfully.
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="../assets/js/products.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/admin-products.js"></script>
+
+</body>
+
+</html>

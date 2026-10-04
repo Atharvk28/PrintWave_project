@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customers | PrintWave Admin</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/admin-customers.css">
+</head>
+
+<body>
+
+<!-- =========================================
+     TOPBAR
+========================================= -->
+
+<header class="admin-topbar">
+
+    <div class="admin-brand">
+
+        <a href="../index.html">
+
+            <img
+                src="../assets/images/printwave-logo.png"
+                alt="PrintWave"
+                class="admin-logo"
+            >
+
+        </a>
+
+        <span>Admin Panel</span>
+
+    </div>
+
+
+    <div class="admin-top-actions">
+
+        <a href="../index.html" class="view-store">
+
+            <i class="bi bi-shop"></i>
+
+            <span>View Store</span>
+
+        </a>
+
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+
+                <i class="bi bi-person"></i>
+
+            </div>
+
+            <div>
+
+                <strong>Administrator</strong>
+
+                <small>Admin</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================
+     LAYOUT
+========================================= -->
+
+<div class="admin-layout">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="admin-sidebar">
+
+        <div class="sidebar-menu">
+
+            <a href="admin-dashboard.html">
+
+                <i class="bi bi-grid-1x2"></i>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="admin-products.html">
+
+                <i class="bi bi-box-seam"></i>
+
+                <span>Products</span>
+
+            </a>
+
+
+            <a href="admin-orders.html">
+
+                <i class="bi bi-bag-check"></i>
+
+                <span>Orders</span>
+
+            </a>
+
+
+            <a
+                href="admin-customers.html"
+                class="active"
+            >
+
+                <i class="bi bi-people"></i>
+
+                <span>Customers</span>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="bi bi-palette"></i>
+
+                <span>Custom Designs</span>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="bi bi-ticket-perforated"></i>
+
+                <span>Coupons</span>
+
+            </a>
+
+
+            <a href="#">
+
+                <i class="bi bi-gear"></i>
+
+                <span>Settings</span>
+
+            </a>
+
+
+            <div class="sidebar-divider"></div>
+
+
+            <a href="../index.html">
+
+                <i class="bi bi-shop"></i>
+
+                <span>View Store</span>
+
+            </a>
+
+
+            <button
+                id="adminLogout"
+                class="sidebar-logout"
+            >
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- PAGE HEADER -->
+
+        <div class="page-header">
+
+            <div>
+
+                <div class="breadcrumb-text">
+                    Admin / Customers
+                </div>
+
+                <h1>Customers</h1>
+
+                <p>
+                    View and manage PrintWave customer accounts and activity.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             STATISTICS
+        ================================== -->
+
+        <div class="customer-stats">
+
+
+            <div class="customer-stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="bi bi-people"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Total Customers</span>
+
+                    <strong id="totalCustomers">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="customer-stat-card">
+
+                <div class="stat-icon active">
+
+                    <i class="bi bi-person-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Active Customers</span>
+
+                    <strong id="activeCustomers">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="customer-stat-card">
+
+                <div class="stat-icon orders">
+
+                    <i class="bi bi-bag-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Customers With Orders</span>
+
+                    <strong id="customersWithOrders">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="customer-stat-card">
+
+                <div class="stat-icon new">
+
+                    <i class="bi bi-person-plus"></i>
+
+                </div>
+
+                <div>
+
+                    <span>New Customers</span>
+
+                    <strong id="newCustomers">
+                        0
+                    </strong>
+
+                    <small>
+                        Last 30 days
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="customer-stat-card">
+
+                <div class="stat-icon revenue">
+
+                    <i class="bi bi-currency-rupee"></i>
+
+                </div>
+
+                <div>
+
+                    <span>Customer Revenue</span>
+
+                    <strong id="customerRevenue">
+                        ₹0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             CUSTOMER SECTION
+        ================================== -->
+
+        <section class="customers-section">
+
+
+            <!-- TOOLBAR -->
+
+            <div class="customers-toolbar">
+
+
+                <div class="search-box">
+
+                    <i class="bi bi-search"></i>
+
+                    <input
+                        type="text"
+                        id="customerSearch"
+                        placeholder="Search name, email or phone..."
+                    >
+
+                </div>
+
+
+                <select id="customerFilter">
+
+                    <option value="all">
+                        All Customers
+                    </option>
+
+                    <option value="with-orders">
+                        With Orders
+                    </option>
+
+                    <option value="without-orders">
+                        Without Orders
+                    </option>
+
+                    <option value="new">
+                        New Customers
+                    </option>
+
+                </select>
+
+
+                <select id="customerSort">
+
+                    <option value="newest">
+                        Newest First
+                    </option>
+
+                    <option value="oldest">
+                        Oldest First
+                    </option>
+
+                    <option value="orders-high">
+                        Most Orders
+                    </option>
+
+                    <option value="spending-high">
+                        Highest Spending
+                    </option>
+
+                    <option value="name">
+                        Name A-Z
+                    </option>
+
+                </select>
+
+
+                <button
+                    id="clearCustomerFilters"
+                    class="clear-filter-btn"
+                >
+
+                    <i class="bi bi-arrow-counterclockwise"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="table-wrapper">
+
+                <table class="customers-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Customer</th>
+
+                            <th>Contact</th>
+
+                            <th>Orders</th>
+
+                            <th>Total Spent</th>
+
+                            <th>Last Order</th>
+
+                            <th>Joined</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="customersTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                id="emptyCustomers"
+                class="empty-customers"
+            >
+
+                <i class="bi bi-people"></i>
+
+                <h3>
+                    No customers found
+                </h3>
+
+                <p>
+                    Customer accounts will appear here.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================
+     CUSTOMER DETAILS MODAL
+========================================= -->
+
+<div
+    class="customer-modal"
+    id="customerModal"
+>
+
+    <div class="customer-modal-card">
+
+
+        <!-- HEADER -->
+
+        <div class="customer-modal-header">
+
+            <div class="customer-modal-title">
+
+                <div
+                    class="large-customer-avatar"
+                    id="detailAvatar"
+                >
+                    P
+                </div>
+
+                <div>
+
+                    <span>
+                        Customer Details
+                    </span>
+
+                    <h2 id="detailName">
+                        Customer
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="close-modal"
+                id="closeCustomerModal"
+            >
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- BODY -->
+
+        <div class="customer-details-content">
+
+
+            <!-- CUSTOMER INFORMATION -->
+
+            <div class="detail-section">
+
+                <h3>
+
+                    <i class="bi bi-person"></i>
+
+                    Personal Information
+
+                </h3>
+
+
+                <div class="detail-grid">
+
+
+                    <div>
+
+                        <span>Full Name</span>
+
+                        <strong id="detailFullName">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Email</span>
+
+                        <strong id="detailEmail">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Phone</span>
+
+                        <strong id="detailPhone">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Joined</span>
+
+                        <strong id="detailJoined">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CUSTOMER STATS -->
+
+            <div class="detail-section">
+
+                <h3>
+
+                    <i class="bi bi-bar-chart"></i>
+
+                    Customer Overview
+
+                </h3>
+
+
+                <div class="overview-cards">
+
+
+                    <div>
+
+                        <span>
+                            Total Orders
+                        </span>
+
+                        <strong id="detailOrders">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total Spent
+                        </span>
+
+                        <strong id="detailSpent">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Average Order
+                        </span>
+
+                        <strong id="detailAverage">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT ORDERS -->
+
+            <div class="detail-section">
+
+                <h3>
+
+                    <i class="bi bi-bag"></i>
+
+                    Recent Orders
+
+                </h3>
+
+
+                <div id="customerOrders">
+
+                </div>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div class="detail-section">
+
+                <h3>
+
+                    <i class="bi bi-person-check"></i>
+
+                    Account Status
+
+                </h3>
+
+
+                <div class="customer-status-row">
+
+                    <select id="customerStatus">
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+
+                    <button
+                        id="saveCustomerStatus"
+                        class="save-status-btn"
+                    >
+
+                        <i class="bi bi-check-lg"></i>
+
+                        Update Status
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    id="adminToast"
+    class="admin-toast"
+>
+    Customer updated successfully.
+</div>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+<script src="../assets/js/main.js"></script>
+
+<script src="../assets/js/admin-customers.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* =====================================================
+   PRINTWAVE COLLECTION CATEGORY
+===================================================== */
+
+.collection-category-hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 90px 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #fff4ec,
+            #fffaf7
+        );
+}
+
+.collection-category-hero::before,
+.collection-category-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.collection-category-hero::before {
+    width: 220px;
+    height: 220px;
+    background: rgba(255, 107, 53, .08);
+    left: -70px;
+    top: -80px;
+}
+
+.collection-category-hero::after {
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 180, 120, .08);
+    right: -100px;
+    bottom: -150px;
+}
+
+.collection-category-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.collection-eyebrow {
+    color: #ff6b35;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.collection-category-hero h1 {
+    font-size: clamp(38px, 6vw, 62px);
+    font-weight: 900;
+    margin: 12px 0;
+    color: #171717;
+}
+
+.collection-category-hero p {
+    max-width: 680px;
+    margin: auto;
+    color: #777;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   COLLECTION THEME
+===================================================== */
+
+.collection-festival .collection-category-hero {
+    background: #fff7ef;
+}
+
+.collection-team .collection-category-hero {
+    background: #f4f7ff;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .collection-category-hero {
+        padding: 65px 20px;
+    }
+
+}
